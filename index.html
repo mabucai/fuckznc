@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#242991">
+  <meta name="description" content="挑一张 ZNC 的表情，点击照片或按钮，为它加一票。">
+  <title>fuckznc · 表情放映室</title>
+  <link rel="icon" href="./assets/01.webp">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="wordmark" href="./" aria-label="fuckznc 首页"><i aria-hidden="true">z</i> fuckznc</a>
+      <nav aria-label="页面工具">
+        <button id="sound" aria-pressed="false">音效 · 关</button>
+        <button id="share">分享</button>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="play" aria-labelledby="title">
+      <div class="projector">
+        <div class="monitor">
+          <div class="monitor-bar"><span>表情放映室</span><span id="position">01 / 07</span></div>
+          <button id="screen" aria-label="给当前表情加一票">
+            <img id="photo" src="./assets/01.webp" alt="红头带，笑着看镜头" fetchpriority="high">
+          </button>
+          <div class="caption"><strong id="caption">红头带</strong><button id="shuffle">随机换片 ↻</button></div>
+          <span id="pop" aria-hidden="true" hidden>+1</span>
+        </div>
+        <div class="film" id="film" role="group" aria-label="选择放映的表情"></div>
+      </div>
+      <div class="controls">
+        <div class="status"><i id="light"></i><span id="connection">正在连接全站</span></div>
+        <h1 id="title">FUCK<span>ZNC<span class="dot">.</span></span></h1>
+        <div class="readout"><div class="readout-label">全站点击 <span>GLOBAL</span></div><output id="total">—</output></div>
+        <button id="hit"><span>FUCK ZNC</span><b>+1</b></button>
+        <div class="hint"><span>点击照片或按 <kbd>SPACE</kbd></span><span id="pending">每 5 秒同步</span></div>
+      </div>
+    </section>
+    <section class="details" aria-label="点击统计">
+      <div><h2>我的记录</h2>
+        <dl><div><dt>今日点击</dt><dd id="today">0</dd></div><div><dt>本次点击</dt><dd id="session">0</dd></div><div><dt>最高连击</dt><dd id="best">0</dd></div></dl>
+      </div>
+      <div><div class="rank-head"><h2>表情热力榜</h2><button id="all">查看全部</button></div><ol id="top"><li>正在读取全站记录…</li></ol></div>
+    </section>
+  </main>
+  <dialog id="ranking" aria-labelledby="rank-title"><div class="rank-head"><h2 id="rank-title">全站表情热力榜</h2><button id="close" aria-label="关闭排行榜">关闭</button></div><ol id="full"></ol></dialog>
+  <div id="toast" role="status" hidden></div>
+</body>
+</html>
