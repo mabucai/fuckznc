@@ -37,9 +37,9 @@ nav button:hover,.rank-head button:hover {border-color:var(--blue);color:var(--b
 .status {display:flex;gap:8px;align-items:center;font-size:.84rem;color:var(--blue)}
 .status i {width:8px;height:8px;background:#9b9489;border-radius:50%}
 .status i.on {background:#548329}
-h1 {font:900 clamp(74px,7.6vw,112px)/.82 Impact,"Arial Black",sans-serif;letter-spacing:-.035em;margin:25px 0 32px;color:var(--ink)}
-h1>span {display:block;color:var(--blue)}
-.dot {color:var(--blue)}
+h1 {display:flex;flex-direction:column;align-items:flex-start;font:900 clamp(74px,7.6vw,112px)/1.02 Impact,"Arial Black",sans-serif;letter-spacing:.07em;margin:25px 0 32px;color:var(--ink)}
+h1 .subject {color:var(--blue)}
+
 .readout {border-top:1px solid var(--rule);padding:15px 0 20px}
 .readout-label {justify-content:flex-start;gap:12px;font-size:.9rem;font-weight:650}
 .readout-label span {font:.76rem var(--mono);color:#66657a;letter-spacing:.08em}
@@ -68,8 +68,8 @@ dialog::backdrop {background:#11122b96}
   .play {display:flex;flex-direction:column;gap:0;align-items:stretch;padding:22px 0}
   .controls {display:contents}
   .status {order:0}
-  h1 {order:1;margin:12px 0 20px;font-size:clamp(54px,12vw,74px);line-height:.95}
-  h1>span {display:inline;margin-left:.12em}
+  h1 {order:1;flex-flow:row wrap;gap:0 .32em;margin:12px 0 20px;font-size:clamp(40px,13.5vw,74px)}
+
   .projector {order:2}
   .readout {order:3;display:flex;align-items:center;justify-content:space-between;border:0;padding:18px 0 8px}
   #total {font-size:2.5rem;margin:0}

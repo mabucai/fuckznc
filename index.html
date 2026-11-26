@@ -7,7 +7,7 @@
   <meta name="description" content="挑一张 ZNC 的表情，点击照片或按钮，为它加一票。">
   <title>fuckznc · 表情放映室</title>
   <link rel="icon" href="./assets/01.webp">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css?v=title-spacing-2">
   <script type="module" src="./app.js"></script>
 </head>
 <body>
@@ -35,7 +35,7 @@
       </div>
       <div class="controls">
         <div class="status"><i id="light"></i><span id="connection">正在连接全站</span></div>
-        <h1 id="title">FUCK<span>ZNC<span class="dot">.</span></span></h1>
+        <h1 id="title"><span>FUCK</span> <span class="subject">ZNC.</span></h1>
         <div class="readout"><div class="readout-label">全站点击 <span>GLOBAL</span></div><output id="total">—</output></div>
         <button id="hit"><span>FUCK ZNC</span><b>+1</b></button>
         <div class="hint"><span>点击照片或按 <kbd>SPACE</kbd></span><span id="pending">每 5 秒同步</span></div>
